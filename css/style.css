@@ -1,0 +1,174 @@
+/*.sap-desktop .sapMIBar.sapMHeader-CTX {
+background-color: #E5A146 !important;
+filter: none;
+background-image: none;
+}*/
+
+.sap-desktop .sapMIBar.sapMHeader-CTX {
+background-color: #8EC0DA !important;
+filter: none;
+background-image: none;
+}
+
+.sap-desktop .sapMBar.sapMPageHeader {
+background-color: #8EC0DA !important;
+filter: none;
+background-image: none;
+}
+
+.sap-desktop ::-webkit-scrollbar-thumb {
+background-color: #100202 !important;
+}
+
+.sapUiBody {
+background-color: #0D0C0C;
+color: #100202 !important;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 16px;
+-webkit-tap-highlight-color: transparent;
+}
+
+.sapMLabel {
+color: #100202 !important;
+font-size: 0.875rem;
+font-family: Arial,Helvetica,sans-serif;
+font-weight: normal;
+}
+
+.sapMPageScroll {
+background-color: #C5C4C4 !important;
+min-height: 100%;
+overflow: hidden;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.sapUiRFLRow {
+	background-color: #8EC0DA !important;
+position: relative;
+display: block;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+/* -webkit-box-sizing: border-box; */
+}
+
+.sapMBarRight, .sapMBarLeft, .sapMBarPH {
+	background-color: #8EC0DA !important;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.sapMIBar-CTX.sapMFooter-CTX {
+color: #ffffff;
+text-shadow: 0 0.0625em 0 rgba(0,0,0,0.5);
+background-color: #8EC0DA !important;
+background-image: none;
+border-top: 0.0625rem solid rgba(229,229,229,0.2);
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+.sapMListBGSolid .sapMLIB {
+background-color: C5BFBF !important;
+}
+.sapMLIB.sapMLIBSelected, .sapMLIB.sapMLIBSelected>td {
+background: #E5A146 !important;
+}
+
+.sapUiFormResLayout>div {
+background-color: #8EC0DA !important;
+padding: 16px;
+-moz-box-sizing: padding-box;
+box-sizing: border-box;
+}
+.sapMSltIcon {
+font-size: 1.375rem;
+line-height: 2.375rem;
+padding: 0 0.625rem;
+color: #FFFFFF !important;
+}
+
+/*.sapMSFB {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+height: 3rem;
+line-height: 2.875rem;
+border: none;
+vertical-align: top;
+width: 100%;
+display: -webkit-box;
+display: -moz-box;
+display: -webkit-flex;
+display: flex;
+background-color: #FFFFFF !important;
+}*/
+
+.sapUiFormResGrid>div {
+background-color:  #8EC0DA !important;
+padding: 1rem;
+-moz-box-sizing: padding-box;
+box-sizing: border-box;
+}
+
+.sapUiFormResGrid>.sapUiFormTitle {
+height: 3rem;
+line-height: 3rem;
+-moz-box-sizing: padding-box;
+box-sizing: border-box;
+padding: 0 1rem 0 1rem;
+text-shadow: 0 0.0625em 0 #ffffff;
+color: #100202 !important;
+}
+
+.invisible {
+	display: none;
+}
+
+.welcomeText {
+	font-size: 1.0rem;
+	margin: 2rem;
+}
+
+.welcomeIcon {
+
+	margin: 0.5rem;
+	color: #DDDDDD;
+	opacity: 1;
+
+	/* transition: IE10, Opera, Firefox, Chrome 26  */
+	transition:
+		color 2.5s ease-in-out,
+		transform 2.5s ease-in-out,
+		-webkit-transform 2.5s ease-in-out,
+		opacity 5s ease-in-out;
+	
+	/* -webkit-transition: Safari, Android Browser, BB Browser, Chrome 25 */
+	-webkit-transition:
+		color 2.5s ease-in-out,
+		-webkit-transform 2.5s ease-in-out,
+		opacity 8s ease-in-out;
+}
+
+.welcomeIconRotateForward {
+	
+	color: rgb(51,51,51);
+	
+	/* transform: IE10, Opera, Firefox */
+	transform: rotate(360deg);
+	
+	/* -webkit-transform: Chrome, Safari, Android Browser, BB Browser */
+	-webkit-transform: rotate(360deg);
+}
+
+.welcomeIconRotateBackward {
+	color: #009de0;
+	transform: rotate(-360deg);
+	-webkit-transform: rotate(-360deg);
+}
+
+.welcomeIconFade {
+	opacity: 0;
+}

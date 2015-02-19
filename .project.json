@@ -1,0 +1,25 @@
+{
+  "generation": [
+    {
+      "templateId": "ui5template.fioriMasterDetail",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Tue, 17 Feb 2015 18:22:14 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZPROD_CRUDQ_SRV",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hcpdeploy": {
+    "account": "s0012946254trial",
+    "name": "createprodorder"
+  }
+}

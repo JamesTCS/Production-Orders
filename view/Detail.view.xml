@@ -1,0 +1,202 @@
+<mvc:View 
+    controllerName="test4.view.Detail"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page
+        id="detailPage" 
+        navButtonPress="onNavBack" 
+        title="{i18n>DetailTitle}" 
+        showNavButton="{device>/isPhone}">
+        <headerContent>
+			<Button icon="sap-icon://customer-history" text="{i18n>OrderHistoryText}"
+				tooltip="{i18n>OrderDetailsButtonToolTip}" press="handleOrderHistoryButtonPress" />
+		</headerContent>
+        <content>
+            <ObjectHeader 
+                id="detailHeader" 
+				title="{Height}"
+				number=""
+				numberUnit=""
+                introActive="false" 
+                titleActive="false" 
+                iconActive="false">
+                <customData 
+                    id="customData3">
+                    <core:CustomData 
+                        id="coreCustomData3" 
+                        key="sapDtResourcePath" 
+                        value="ProductSet">
+                    </core:CustomData>
+                </customData>
+               <!-- <attributes
+                    id="detailAttributes">                
+                    <ObjectAttribute 
+                        id="attribute" 
+                        text="{i18n>detailText}" 
+                        active="false">
+                    </ObjectAttribute>
+                </attributes>-->
+                <firstStatus
+                    id="detailStatus">
+                    <ObjectStatus 
+                        id="status"
+						text="">
+                        <customData 
+                            id="customData4">
+                            <core:CustomData 
+                                id="coreCustomData4" 
+                                key="sapDtResourcePath" 
+                                value="ProductSet">
+                            </core:CustomData>
+                        </customData>
+                    </ObjectStatus>
+                </firstStatus>
+            </ObjectHeader>
+            <IconTabBar 
+                id="idIconTabBar" 
+                expanded="{device>/isNoPhone}">
+                <customData 
+                    id="customData5">
+                    <core:CustomData 
+                        id="coreCustomData5" 
+                        key="sapDtResourcePath" 
+                        value="ProductSet">
+                    </core:CustomData>
+                </customData>
+    			<items 
+    			    id="detailsItems">
+                    <IconTabFilter 
+                        id="iconTabFilter1" 
+                        icon="sap-icon://hint"
+                        iconColor="Critical">
+                        <content>
+                            <l:Grid 
+                                id="iconTabFilter1grid" 
+                                width="auto" 
+                                defaultSpan="L12 M12 S12">
+                                <l:content>
+                                   				<f:Form id="FormDisplay354" minWidth="1024" maxContainerCols="2"
+					editable="false" class="isReadonly">
+					<f:title>
+						<core:Title text="Material Information" />
+					</f:title>
+					<f:layout>
+						<f:ResponsiveGridLayout labelSpanL="3"
+							labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+							columnsM="1" />
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer>
+							<f:formElements>
+								<f:FormElement label="Product ID">
+									<f:fields>
+										<Text text="{ProductID}" />
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Product Description">
+									<f:fields>
+										<Text text="{ProductDescription}" />
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Price">
+									<f:fields>
+										<Text
+											text="{
+							path: 'Price',
+							formatter: 'test4.util.Formatter.price'
+						} {Currency}" />
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Weight">
+									<f:fields>
+										<Text text="{Weight} {UoM}" />
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Height">
+									<f:fields>
+										<Text text="{Height}" />
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Plant">
+									<f:fields>
+										<Text text="{PlantID}" />
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+					</f:formContainers>
+				</f:Form>
+                                </l:content>
+                            </l:Grid>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter 
+                        id="iconTabFilter2" 
+                        key="" 
+                        icon="sap-icon://create"
+                        iconColor="Critical">
+                        <content>
+                        <Panel>
+                                   <f:SimpleForm 
+                                        id="iconTabFilter1form" 
+                                        minWidth="1024" 
+                                        editable="false">
+                                        <f:content>
+                                          		<core:Title text="Production Schedule" />
+				<Label text="Production Plant" />
+				<Text text="{PlantID}" />
+				<Label text="Production Planning" />
+				<Text text="{PlannigPlant}" />
+				<Label text="Document Type" />
+				<Select width="35%" id="doc_type">
+					<items>
+						<core:Item text="" />
+						<core:Item text="PP01" />
+						<core:Item text="ZA01" />
+						<core:Item text="ID01" />
+					</items>
+				</Select>
+				<Label text="Quantity" />
+				<Input value="{Quantity}" width="35%" id="qty" />
+				<Label text="Scrap Quantity" />
+				<Input value="{Scrap Quantity}" width="35%" id="sqty" />
+				<Label text="Order Start Date" labelFor="DP1" />
+				<DatePicker placeholder="Enter Date ..." change="handleChange"
+					width="35%" id="start_date" />
+				<Label text="Order End Date" labelFor="DP2" />
+				<DatePicker placeholder="Enter Date ..." change="handleChange"
+					width="35%" id="end_date" />
+                                        </f:content>
+                                    </f:SimpleForm>
+                            </Panel>
+                        </content>
+                    </IconTabFilter>
+    				<core:ExtensionPoint
+    				    name="extIconTabFilter"/>
+                </items>
+            </IconTabBar>
+    		<core:ExtensionPoint 
+    		    name="extDetail"/>
+        </content>
+        <footer
+            id="detailFooter">
+            <Toolbar id="detailToolbar">
+                <content>
+                    <ToolbarSpacer
+                        id="toolbarSpacer">
+                    </ToolbarSpacer>
+                    <Button 
+                        id="saveButton" 
+                        text="{i18n>SaveOrderButtonText}" 
+                        type="Emphasized"
+                        press="validateFields"
+                        icon="sap-icon://save">
+                    </Button>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ActionSheet
+    title="Choose Your Action"
+    showCancelButton="true"
+    placement="Bottom">
+    <buttons>
+      <Button text="View Order Details" icon="sap-icon://display" press="handleViewOrderDetailsPress"/>
+      <Button text="Print Order Details" icon="sap-icon://download" press="handlePrintOrderDetailsPress"/>
+      <Button text="Change Order" icon="sap-icon://edit" press="handleChangeOrderPress"/>
+      <Button text="Manage Order" icon="sap-icon://manager-insight" press="handleManageOrderPress"/>
+      <Button text="Monitor Order" icon="sap-icon://end-user-experience-monitoring" press="handleMonitorOrderPress"/>
+    </buttons>
+  </ActionSheet>
+</core:FragmentDefinition>

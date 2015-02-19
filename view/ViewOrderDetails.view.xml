@@ -1,0 +1,23 @@
+<core:View controllerName="test4.view.ViewOrderDetails"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<Page title="{i18n>OrderDetailsTitle}" showNavButton="true"
+		navButtonPress="handleNavButtonPress"  id="idFormContainer">
+
+		<headerContent>
+			<Button icon="sap-icon://print" tooltip="{i18n>OrderDetailsPagePrint}"
+				press="handlePrintDetails" />
+			<Button  id="idButtonEdit" icon="sap-icon://edit" tooltip="{i18n>ChangeOrderToolTip}" press="handleBarButtonPress" />
+		</headerContent>
+		   <footer>
+      <Bar>
+        <contentRight>
+          <Button id="idButtonSave" text="Save" type="Emphasized" visible="false" press="handleBarButtonPress" />
+          <Button id="idButtonCancel" text="Cancel" visible="false" press="handleBarButtonPress" />
+        </contentRight>
+      </Bar>
+    </footer>
+
+
+	</Page>
+</core:View>

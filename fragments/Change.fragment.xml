@@ -1,0 +1,39 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:core="sap.ui.core">
+ <l:Grid defaultSpan="L12 M12 S12" width="auto">
+			<l:content>
+				<f:SimpleForm id="ChangeDetailsFrom2" minWidth="1024"
+					maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="Order No"
+					labelSpanL="3" labelSpanM="3" emptySpanL="4"
+					emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+					<f:content>
+						<Label text="Order Number" />
+						<Text text="{ProductOrderID}" />
+						<Label text="Production Plant" />
+						<Text value="{PlantID}" />
+						<Label text="Production Planning" />
+						<Text value="{PlannigPlant}" />
+						<Label text="Order Start Date" />
+						<Input value="{ENTER_DATE}"/>
+						<Label text="Order End Date" />
+						<Input value="{EndDate}"/>
+						<Label text="Document Type" />
+						<Text text="{DocType}" />
+						<Label text="Product ID" />
+						<Text value="{ProductID}" />
+						<Label text="Product Description" />
+						<Text value="{ProductDescription}" />
+						<Label text="Price" />
+						<Text text="{Price}" />
+						<Label text="Quantity" />
+						<Input value="{Quantity}" />
+						<Label text="Scrap Quantity" />
+						<Input value="{ScrapQuantity}" />
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+</core:FragmentDefinition>

@@ -1,0 +1,53 @@
+<core:View controllerName="test4.view.OrderHistory" xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Page title="{i18n>OrderHistoryTitle}" showNavButton="true"
+		navButtonPress="handleNavButtonPress">
+
+		<SearchField id="searchField1" liveChange="onSearch"
+			width="100%"/>
+		<Table id="idOrdersTable" inset="false" items="{/ProdOrderSet}"
+			noDataText="{i18n>NoOrderHistoryText}">
+			<headerToolbar>
+				<Toolbar>
+					<Label text="Past Orders"></Label>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+		<!--  		<Column width="8em">
+					<Text text="Order Number" />
+				</Column>-->
+				<Column width="8em">
+					<Text text="Planning Plant" />
+				</Column>
+				<Column width="8em">
+					<Text text="Order Start Date" />
+				</Column>
+				<Column width="8em">
+					<Text text="Order End Date" />
+				</Column>
+				<Column width="8em">
+					<Text text="Document Type" />
+				</Column>
+				<Column width="8em">
+					<Text text="Entered By" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Active" press="handlePastOrderPress">
+					<cells>
+				<!-- 	<ObjectIdentifier title="{OrderNo}" class="sapMTableContentMargin" />-->
+						<ObjectIdentifier title="{PlannigPlant}" class="sapMTableContentMargin" />
+						<ObjectIdentifier
+							title="{ENTER_DATE}" class="sapMTableContentMargin" />
+						<ObjectIdentifier
+							title="{EndDate}" class="sapMTableContentMargin" />
+						<ObjectIdentifier title="{DocType}" class="sapMTableContentMargin" />
+							<ObjectIdentifier title="{DocType}" class="sapMTableContentMargin" />
+								<ObjectIdentifier title="{ENTERED_BY}" class="sapMTableContentMargin" />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+
+	</Page>
+</core:View>

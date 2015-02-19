@@ -1,0 +1,1 @@
+sap.ui.core.mvc.Controller.extend("test4.view.App", {});
