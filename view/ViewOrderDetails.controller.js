@@ -25,20 +25,26 @@ sap.ui.controller("test4.view.ViewOrderDetails", {
 
 	onInit: function(oEvent) {
 
-
 	   // var oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZPROD_CRUDQ_SRV/");
-	   // this.getView().setModel(oModel);
+	//    this.getView().getModel("Orders");
 	//    debugger;
-      //  var oModel = this.getView().getModel("Orders");
-	//    this.setModel(oModel);
+    //    var oModel = this.getView().getModel("Orders");
+	//    sap.ui.getCore().byId("DetailsForm").setModel(oModel);
 	  //  console.log(oModel);
 	    
-
 		// Set the initial form to be the change one
 		var oForm = this._getFormFragment("Display");
+	//	this.getView().createId();
 		this.getView().byId("idFormContainer").insertContent(oForm);
 		this.getView().bindElement("/ProdOrderSet");
 
+	},
+	
+	onBeforeRendering : function(){
+	     var oModel = this.getView().getModel("Orders");
+	     sap.ui.getCore().byId("DetailsForm").setModel(oModel);
+	     this.getView().setBindingContext(sap.ui.getCore().Bundle.context);
+	     sap.ui.getCore().byId("DetailsForm").setBindingContext(sap.ui.getCore().Bundle.context);
 	},
 
 	handleBarButtonPress: function(oEvent) {

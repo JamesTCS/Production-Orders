@@ -13,11 +13,11 @@
 				</Toolbar>
 			</headerToolbar>
 			<columns>
-		<!--  		<Column width="8em">
+		  		<Column width="8em">
 					<Text text="Order Number" />
-				</Column>-->
+				</Column>
 				<Column width="8em">
-					<Text text="Planning Plant" />
+					<Text text="Production Plant" />
 				</Column>
 				<Column width="8em">
 					<Text text="Order Start Date" />
@@ -35,15 +35,12 @@
 			<items>
 				<ColumnListItem type="Active" press="handlePastOrderPress">
 					<cells>
-				<!-- 	<ObjectIdentifier title="{OrderNo}" class="sapMTableContentMargin" />-->
-						<ObjectIdentifier title="{PlannigPlant}" class="sapMTableContentMargin" />
-						<ObjectIdentifier
-							title="{ENTER_DATE}" class="sapMTableContentMargin" />
-						<ObjectIdentifier
-							title="{EndDate}" class="sapMTableContentMargin" />
+						<ObjectIdentifier title="{ProdOrderID}" class="sapMTableContentMargin" />
+						<ObjectIdentifier title="{PlantID}" class="sapMTableContentMargin" />
+						<ObjectIdentifier title="{StartDate}" class="sapMTableContentMargin" />
+						<ObjectIdentifier title="{EndDate}" class="sapMTableContentMargin" />
 						<ObjectIdentifier title="{DocType}" class="sapMTableContentMargin" />
-							<ObjectIdentifier title="{DocType}" class="sapMTableContentMargin" />
-								<ObjectIdentifier title="{ENTERED_BY}" class="sapMTableContentMargin" />
+						<ObjectIdentifier title="{ENTERED_BY}" class="sapMTableContentMargin" />
 					</cells>
 				</ColumnListItem>
 			</items>

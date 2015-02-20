@@ -92,7 +92,7 @@ sap.ui.core.UIComponent.extend("test4.Component", {
 		}
 
 		// Create and set domain model to the component
-		var oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true});
+		var oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, {json: true,loadMetadataAsync: true}, "girish", "Welcome@2");
 		oModel.attachMetadataFailed(function(){
             this.getEventBus().publish("Component", "MetadataFailed");
 		},this);

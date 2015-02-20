@@ -13,6 +13,8 @@
         <headerContent>
 			<Button icon="sap-icon://customer-history" text="{i18n>OrderHistoryText}"
 				tooltip="{i18n>OrderDetailsButtonToolTip}" press="handleOrderHistoryButtonPress" />
+					<Button icon="sap-icon://action" tooltip="{i18n>NavHomeToolTip}" press="goHome" />
+					<Button icon="sap-icon://value-help" tooltip="{i18n>ChangeThemeToolTip}" press="changeTheme" />
 		</headerContent>
         <content>
             <ObjectHeader 
@@ -69,71 +71,6 @@
     			<items 
     			    id="detailsItems">
                     <IconTabFilter 
-                        id="iconTabFilter1" 
-                        icon="sap-icon://hint"
-                        iconColor="Critical">
-                        <content>
-                            <l:Grid 
-                                id="iconTabFilter1grid" 
-                                width="auto" 
-                                defaultSpan="L12 M12 S12">
-                                <l:content>
-                                   				<f:Form id="FormDisplay354" minWidth="1024" maxContainerCols="2"
-					editable="false" class="isReadonly">
-					<f:title>
-						<core:Title text="Material Information" />
-					</f:title>
-					<f:layout>
-						<f:ResponsiveGridLayout labelSpanL="3"
-							labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
-							columnsM="1" />
-					</f:layout>
-					<f:formContainers>
-						<f:FormContainer>
-							<f:formElements>
-								<f:FormElement label="Product ID">
-									<f:fields>
-										<Text text="{ProductID}" />
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Product Description">
-									<f:fields>
-										<Text text="{ProductDescription}" />
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Price">
-									<f:fields>
-										<Text
-											text="{
-							path: 'Price',
-							formatter: 'test4.util.Formatter.price'
-						} {Currency}" />
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Weight">
-									<f:fields>
-										<Text text="{Weight} {UoM}" />
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Height">
-									<f:fields>
-										<Text text="{Height}" />
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Plant">
-									<f:fields>
-										<Text text="{PlantID}" />
-									</f:fields>
-								</f:FormElement>
-							</f:formElements>
-						</f:FormContainer>
-					</f:formContainers>
-				</f:Form>
-                                </l:content>
-                            </l:Grid>
-                        </content>
-                    </IconTabFilter>
-                    <IconTabFilter 
                         id="iconTabFilter2" 
                         key="" 
                         icon="sap-icon://create"
@@ -149,7 +86,12 @@
 				<Label text="Production Plant" />
 				<Text text="{PlantID}" />
 				<Label text="Production Planning" />
-				<Text text="{PlannigPlant}" />
+		    <!--	<Select width="35%" id="plan">
+					<items>
+						<core:Item text="" />
+						<core:Item text="1000" />
+					</items>
+				</Select>-->
 				<Label text="Document Type" />
 				<Select width="35%" id="doc_type">
 					<items>
@@ -192,7 +134,7 @@
                         id="saveButton" 
                         text="{i18n>SaveOrderButtonText}" 
                         type="Emphasized"
-                        press="validateFields"
+                        press="handleSaveOrderButtonPress"
                         icon="sap-icon://save">
                     </Button>
                 </content>

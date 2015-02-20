@@ -1,7 +1,7 @@
 <core:View controllerName="test4.view.Master"
 	xmlns="sap.m" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
-	<Page title ="{i18n>MasterTitle}" showHeader="true"  class="marginBoxContent" >
+	<Page title ="{i18n>MasterTitle}" id="masterPage" showHeader="true"  class="marginBoxContent" >
 	<headerContent>
       <Button icon="sap-icon://supplier"
       tooltip="{i18n>SelectProductionPlantButtonToolTip}"
@@ -30,6 +30,9 @@
 							formatter: 'myApp.util.Formatter.price'
 						}"
 				numberUnit="{Currency}" >
+				<attributes>
+				    <ObjectAttribute text="{ProductDescription}" />
+				</attributes>
 			</ObjectListItem>
 
 		</List>
