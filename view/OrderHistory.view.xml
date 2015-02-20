@@ -45,6 +45,9 @@
 				</ColumnListItem>
 			</items>
 		</Table>
-
+<footer>
+		<Bar>
+			</Bar>
+		</footer>
 	</Page>
 </core:View>

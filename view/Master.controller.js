@@ -204,5 +204,8 @@ sap.ui.core.mvc.Controller.extend("test4.view.Master", {
 		}
         
 		oEvent.getSource().getBinding("items").filter([]);
+	},
+		goHome: function() {
+		location.assign("https://appholderdashboardfinal-s0012946255trial.dispatcher.hanatrial.ondemand.com");
 	}
 });

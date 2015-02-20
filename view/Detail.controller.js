@@ -242,10 +242,6 @@ sap.ui.core.mvc.Controller.extend("test4.view.Detail", {
 				}*/
 	,
 
-	goHome: function() {
-		location.assign("https://appholderdashboardfinal-s0012946255trial.dispatcher.hanatrial.ondemand.com");
-	},
-
 	changeTheme: function() {
 		if (this.isHCB) {
 			sap.ui.getCore().applyTheme("sap_bluecrystal");
