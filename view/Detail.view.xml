@@ -13,7 +13,6 @@
         <headerContent>
 			<Button icon="sap-icon://customer-history" text="{i18n>OrderHistoryText}"
 				tooltip="{i18n>OrderDetailsButtonToolTip}" press="handleOrderHistoryButtonPress" />
-					<Button icon="sap-icon://action" tooltip="{i18n>NavHomeToolTip}" press="goHome" />
 					<Button icon="sap-icon://value-help" tooltip="{i18n>ChangeThemeToolTip}" press="changeTheme" />
 		</headerContent>
         <content>
