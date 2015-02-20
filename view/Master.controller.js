@@ -163,14 +163,6 @@ sap.ui.core.mvc.Controller.extend("test4.view.Master", {
 			this._oDialog = sap.ui.xmlfragment("test4.fragments.Dialog", this);
 		}
 
-		// Multi-select if required
-	//	var bMultiSelect = !!oEvent.getSource().data("multi");
-	//	this._oDialog.setMultiSelect(bMultiSelect);
-
-		// Remember selections if required
-	//	var bRemember = !!oEvent.getSource().data("remember");
-	//	this._oDialog.setRememberSelections(bRemember);
-
 		this._oDialog.setModel(this.getView().getModel());
 		// toggle compact style
 		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(),
@@ -182,14 +174,6 @@ sap.ui.core.mvc.Controller.extend("test4.view.Master", {
 		if (!this._oDialog) {
 			this._oDialog = sap.ui.xmlfragment("test4.view.Dialog", this);
 		}
-
-		// Multi-select if required
-	//	var bMultiSelect = !!oEvent.getSource().data("multi");
-	//	this._oDialog.setMultiSelect(bMultiSelect);
-
-		// Remember selections if required
-	//	var bRemember = !!oEvent.getSource().data("remember");
-	//	this._oDialog.setRememberSelections(bRemember);
 
 		this._oDialog.setModel(this.getView().getModel());
 		// toggle compact style
@@ -210,13 +194,15 @@ sap.ui.core.mvc.Controller.extend("test4.view.Master", {
 
 		jQuery.sap.require("sap.m.MessageToast");
 		var aContexts = oEvent.getParameter("selectedContexts");
+	//	this.getView().setBindingContext(aContexts).byId("masterPage");
+		//var select = oEvent.getObject("selectedContexts").byId("masterPage").setTitle(select);
 		if (aContexts.length) {
 			sap.m.MessageToast.show("You have chosen PlantID "
 					+ aContexts.map(function(oContext) {
 						return oContext.getObject().PlantID;
 					}).join(", "));
 		}
-
+        
 		oEvent.getSource().getBinding("items").filter([]);
 	}
 });

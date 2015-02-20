@@ -64,8 +64,8 @@
                                         editable="false">
                                         <f:content>
                                           		<core:Title text="Production Schedule" />
-				<Label text="Production Plant" />
-				<Text text="{PlantID}" />
+				<!--<Label text="Production Plant" />
+				<Text text="{PlantID}" />-->
 				<Label text="Production Planning" />
 		        <Select width="35%" id="plan">
 					<items>
