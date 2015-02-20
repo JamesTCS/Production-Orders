@@ -40,7 +40,7 @@
                         text="{i18n>detailText}" 
                         active="false">
                     </ObjectAttribute>
-                </attributes>-->
+                </attributes>
                 <firstStatus
                     id="detailStatus">
                     <ObjectStatus 
@@ -55,28 +55,9 @@
                             </core:CustomData>
                         </customData>
                     </ObjectStatus>
-                </firstStatus>
+                </firstStatus>-->
             </ObjectHeader>
-            <IconTabBar 
-                id="idIconTabBar" 
-                expanded="{device>/isNoPhone}">
-                <customData 
-                    id="customData5">
-                    <core:CustomData 
-                        id="coreCustomData5" 
-                        key="sapDtResourcePath" 
-                        value="ProductSet">
-                    </core:CustomData>
-                </customData>
-    			<items 
-    			    id="detailsItems">
-                    <IconTabFilter 
-                        id="iconTabFilter2" 
-                        key="" 
-                        icon="sap-icon://create"
-                        iconColor="Critical">
-                        <content>
-                        <Panel>
+         
                                    <f:SimpleForm 
                                         id="iconTabFilter1form" 
                                         minWidth="1024" 
@@ -86,12 +67,12 @@
 				<Label text="Production Plant" />
 				<Text text="{PlantID}" />
 				<Label text="Production Planning" />
-		    <!--	<Select width="35%" id="plan">
+		        <Select width="35%" id="plan">
 					<items>
 						<core:Item text="" />
 						<core:Item text="1000" />
 					</items>
-				</Select>-->
+				</Select>
 				<Label text="Document Type" />
 				<Select width="35%" id="doc_type">
 					<items>
@@ -113,15 +94,7 @@
 					width="35%" id="end_date" />
                                         </f:content>
                                     </f:SimpleForm>
-                            </Panel>
-                        </content>
-                    </IconTabFilter>
-    				<core:ExtensionPoint
-    				    name="extIconTabFilter"/>
-                </items>
-            </IconTabBar>
-    		<core:ExtensionPoint 
-    		    name="extDetail"/>
+           
         </content>
         <footer
             id="detailFooter">
