@@ -7,7 +7,7 @@ sap.ui.controller("test4.view.ViewOrderDetails", {
 	handlePrintDetails: function(evt) {
 		window.print();
 	},
-
+    /*
 	_fragments: {},
 
 	_getFormFragment: function(sName) {
@@ -21,30 +21,39 @@ sap.ui.controller("test4.view.ViewOrderDetails", {
 		jQuery.each(this._fragments, function(i, oFrag) {
 			oFrag.destroy();
 		});
-	},
+	},*/
 
 	onInit: function(oEvent) {
+	    
 
 	   // var oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZPROD_CRUDQ_SRV/");
 	//    this.getView().getModel("Orders");
 	//    debugger;
-    //    var oModel = this.getView().getModel("Orders");
-	//    sap.ui.getCore().byId("DetailsForm").setModel(oModel);
+     //   var oModel = this.getView().getModel("Orders");
+	 //   sap.ui.getCore().byId("DetailsForm").setModel(oModel);
 	  //  console.log(oModel);
 	    
 		// Set the initial form to be the change one
-		var oForm = this._getFormFragment("Display");
+	//	var oForm = this._getFormFragment("Display");
 	//	this.getView().createId();
-		this.getView().byId("idFormContainer").insertContent(oForm);
-		this.getView().bindElement("/ProdOrderSet");
+	//	this.getView().byId("idFormContainer").insertContent(oForm);
+	//	this.getView().bindElement("/ProdOrderSet");
 
 	},
 	
 	onBeforeRendering : function(){
-	     var oModel = this.getView().getModel("Orders");
-	     sap.ui.getCore().byId("DetailsForm").setModel(oModel);
-	     this.getView().setBindingContext(sap.ui.getCore().Bundle.context);
-	     sap.ui.getCore().byId("DetailsForm").setBindingContext(sap.ui.getCore().Bundle.context);
+	     var oModel = this.getView().getModel(); // not needed just to debug ODataModel
+	     var context = sap.ui.getCore().Bundle.context;
+	     var form = this.byId("DetailsForm");
+	     //form.sPath = context;
+	     form.bindElement(context);
+	     debugger;
+	     //this.byId("test").setBindingContext(sap.ui.getCore().Bundle.context);
+	    //this.getview().byId("test").
+	    
+	     //this.getView().byId("DetailsForm").setModel(oModel);
+	     //this.getView().byId("DetailsForm").setBindingContext(context);
+	     
 	},
 
 	handleBarButtonPress: function(oEvent) {

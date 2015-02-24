@@ -110,18 +110,22 @@ sap.ui.core.UIComponent.extend("test4.Component", {
 		oDeviceModel.setDefaultBindingMode("OneWay");
 		this.setModel(oDeviceModel, "device");
 
-        var oProdModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZPROD_CRUDQ_SRV/");
-	    this.setModel(oProdModel, "Orders");
-
+        //var oProdModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZPROD_CRUDQ_SRV/");
+	    //this.setModel(oProdModel, "Orders");
+        
           var orderHistoryView = new sap.ui.xmlview("OrderHistory", "test4.view.OrderHistory");
-          sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(orderHistoryView, false);
+          //sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(orderHistoryView, false);
           
           var changeOrderView = new sap.ui.xmlview("ChangeOrder", "test4.view.ChangeOrder");
-          sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(changeOrderView, false);
+          //sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(changeOrderView, false);
           
            var detailsView = new sap.ui.xmlview("ViewOrderDetails", "test4.view.ViewOrderDetails");
-          sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(detailsView, false);
-         //   debugger;
+          //sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(detailsView, false);
+         
+         sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(orderHistoryView);
+         sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(changeOrderView);
+         sap.ui.getCore().byId("__xmlview0--idAppControl").addDetailPage(detailsView);
+         
 		this.getRouter().initialize();
 	},
 

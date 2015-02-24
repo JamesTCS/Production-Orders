@@ -46,6 +46,7 @@ sap.ui.core.mvc.Controller.extend("test4.view.Detail", {
 			var sEntityPath = "/" + oParameters.arguments.entity;
 			this.bindView(sEntityPath);
 
+            /*
 			var oIconTabBar = oView.byId("idIconTabBar");
 			oIconTabBar.getItems().forEach(function(oItem) {
 				oItem.bindElement(oItem.getKey());
@@ -59,7 +60,7 @@ sap.ui.core.mvc.Controller.extend("test4.view.Detail", {
 
 			if (oIconTabBar.getSelectedKey() !== sTabKey) {
 				oIconTabBar.setSelectedKey(sTabKey);
-			}
+			}*/
 		}, this));
 
 	},

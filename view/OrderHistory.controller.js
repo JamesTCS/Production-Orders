@@ -3,7 +3,11 @@ sap.ui.controller("test4.view.OrderHistory", {
 	onInit: function() {
 		// console.log("Hi");
 		 sap.ui.getCore().Bundle = new Object();
+		 
+		 
 	},
+	
+
 
 	handleNavButtonPress: function() {
 		sap.ui.getCore().byId("__xmlview0--idAppControl").backDetail("detail");
@@ -12,8 +16,8 @@ sap.ui.controller("test4.view.OrderHistory", {
 	handlePastOrderPress: function(evt) {
 		var oSelection = evt.getSource();
 		var context = oSelection.getBindingContext().getPath();
+		
 		sap.ui.getCore().Bundle.context= context;
-	//	debugger;
 
 		// create action sheet only once
 		if (!this.actionSheet) {
@@ -29,12 +33,8 @@ sap.ui.controller("test4.view.OrderHistory", {
 
 	handleViewOrderDetailsPress: function(evt) {
 
-		var item = evt.getSource();
-		var context = item.getBindingContext();
-	//	debugger;
-		sap.ui.getCore().Bundle.context = context;
 		sap.ui.getCore().byId("__xmlview0--idAppControl").toDetail("ViewOrderDetails");
-
+        
 		//   sap.ui.getCore().byId("__xmlview0--idAppControl").toDetail("ViewOrderDetails");
 	},
 

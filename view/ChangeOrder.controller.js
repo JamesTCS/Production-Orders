@@ -1,7 +1,7 @@
 sap.ui.controller("test4.view.ChangeOrder", {
 
 	handleNavButtonPress: function(evt) {
-		sap.ui.getCore().byId("__xmlview0--idAppControl").backDetail("OrderHistory");
+		sap.ui.getCore().byId("__xmlview0--idAppControl").backDetail();
 	},
 
 	_fragments: {},

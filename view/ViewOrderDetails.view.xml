@@ -9,6 +9,41 @@
 				press="handlePrintDetails" />
 			<Button  id="idButtonEdit" icon="sap-icon://edit" tooltip="{i18n>ChangeOrderToolTip}" press="handleBarButtonPress" />
 		</headerContent>
+		<content>
+		    <Label text="Product Order ID:" />
+		    <Text id="test" text="{/ProdOrderID}" />
+		    <l:Grid defaultSpan="L12 M12 S12" width="auto">
+			<l:content>
+				<f:SimpleForm  id="DetailsForm" minWidth="1024"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" title="Order No"
+					labelSpanL="3" labelSpanM="3" emptySpanL="4"
+					emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+					<f:content>
+						<Label text="Order Number" />
+						<Text text="{/ProdOrderID}" />
+						<Label text="Production Plant" />
+						<Text text="{PlantID}" />
+						<Label text="Production Planning" />
+						<Text text="{PlannigPlant}" />
+						<Label text="Order Start Date" />
+						<Text text="{ENTER_DATE}"/>
+						<Label text="Order End Date" />
+						<Text text="{EndDate}"/>
+						<Label text="Document Type" />
+						<Text text="{DocType}" />
+						<Label text="Product ID" />
+						<Text text="{ProductID}" />
+						<Label text="Product Description" />
+						<Text text="{ProductDescription}" />
+						<Label text="Price" />
+						<Text text="{Price} {Currency}" />
+						<Label text="Quantity" />
+						<Text text="{Quantity}" />
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+		</content>
 		   <footer>
       <Bar>
         <contentRight>
