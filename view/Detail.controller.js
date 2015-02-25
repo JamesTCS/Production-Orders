@@ -165,7 +165,6 @@ sap.ui.core.mvc.Controller.extend("test4.view.Detail", {
 				}
 			}, bundle.getText("SaveOrderDialogTitle"));*/
 
-		//debugger;
 		var Orders = {
 			"d": {
 				"ProdOrderID": "000060003285",
@@ -187,7 +186,7 @@ sap.ui.core.mvc.Controller.extend("test4.view.Detail", {
 					var squantity = this.byId("sqty").getValue();
 					var startDte = this.byId("start_date").getDateValue().toISOString();
 					var endDate = this.byId("end_date").getDateValue().toISOString();
-            //       debugger;
+                  
 					Orders.d.DocType = docTy;
 					Orders.d.Quanity = quantity;
 					Orders.d.ScrapQty = squantity;

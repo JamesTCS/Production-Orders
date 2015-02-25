@@ -1,15 +1,55 @@
 <core:View controllerName="test4.view.ChangeOrder"
-	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	xmlns="sap.m" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:core="sap.ui.core">
 	<Page title="{i18n>ChangeOrderTitle}" showNavButton="true"
 		navButtonPress="handleNavButtonPress"
     id="idFormContainer"
     showHeader="true" >
+    <content>
+        <l:Grid defaultSpan="L12 M12 S12" width="auto">
+			<l:content>
+				<f:SimpleForm id="DetailsForm" minWidth="1024"
+					maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="Order No"
+					labelSpanL="3" labelSpanM="3" emptySpanL="4"
+					emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+					<f:content>
+						<Label text="Order Number" />
+						<Text id="productOrderId" text="{ProdOrderID}" />
+						<Label text="Production Plant" />
+						<Text id="plantId" text="{PlantID}" />
+						<Label text="Production Planning" />
+						<Text id="planningPlant" text="{PlannigPlant}" />
+						<Label text="Order Start Date" />
+						<Input id="startDate" value="{ENTER_DATE}"/>
+						<Label text="Order End Date" />
+						<Input id="endDate" value="{EndDate}"/>
+						<Label text="Document Type" />
+						<Text id="docType" text="{DocType}" />
+						<Label text="Product ID" />
+						<Text id="productId" text="{ProductID}" />
+						<Label text="Product Description" />
+						<Text text="{ProductDescription}" /> <!-- field not in OData -->
+						<Label text="Price" />
+						<Text id="price" text="{Price}" /> <!-- field not in OData -->
+						<Label text="Quantity" />
+						<Input id="quantity" value="{Quanity}" />
+						<Label text="Scrap Quantity" />
+						<Input id="scrapQuantity" value="{ScrapQty}" />
+						<Label text="Unit" />
+						<Text id="unit" text="{Unit}" />
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+    </content>
     <footer>
       <Bar>
         <contentRight>
-          <Button id="idButtonSave" text="Save" type="Emphasized" visible="true" press="handleFooterBarButtonPress" />
-          <Button id="idButtonCancel" text="Cancel" visible="true" press="handleFooterBarButtonPress" />
- 		  <Button id="idButtonEdit" text="Edit" visible="false" press="handleFooterBarButtonPress" />
+          <Button id="idButtonSave" text="Save" type="Emphasized" visible="true" press="saveBtn" />
+          <Button id="idButtonCancel" text="Cancel" visible="true" press="cancelBtn" />
+ 		  
         </contentRight>
       </Bar>
     </footer>

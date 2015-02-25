@@ -20,7 +20,7 @@
 					emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
 					<f:content>
 						<Label text="Order Number" />
-						<Text text="{/ProdOrderID}" />
+						<Text text="{ProdOrderID}" />
 						<Label text="Production Plant" />
 						<Text text="{PlantID}" />
 						<Label text="Production Planning" />

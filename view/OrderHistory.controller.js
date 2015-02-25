@@ -12,6 +12,10 @@ sap.ui.controller("test4.view.OrderHistory", {
 	handleNavButtonPress: function() {
 		sap.ui.getCore().byId("__xmlview0--idAppControl").backDetail("detail");
 	},
+	
+	handleManageOrderPress: function() {
+	    location.assign("https://createpo4-s0012946252trial.dispatcher.hanatrial.ondemand.com/");
+	},
 
 	handlePastOrderPress: function(evt) {
 		var oSelection = evt.getSource();
@@ -41,6 +45,9 @@ sap.ui.controller("test4.view.OrderHistory", {
 	handlePrintOrderDetailsPress: function(evt) {
 
 		sap.ui.getCore().byId("__xmlview0--idAppControl").toDetail("ViewOrderDetails");
+	
+		
+		
 		setTimeout(delay, 500);
 
 		function delay() {

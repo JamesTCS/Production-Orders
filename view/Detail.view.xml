@@ -18,7 +18,7 @@
         <content>
             <ObjectHeader 
                 id="detailHeader" 
-				title="{Height}"
+				title="{ProductID}"
 				number=""
 				numberUnit=""
                 introActive="false" 

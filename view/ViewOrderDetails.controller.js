@@ -1,4 +1,16 @@
 sap.ui.controller("test4.view.ViewOrderDetails", {
+    
+    onInit: function() {
+        this.form = this.byId("DetailsForm");
+        this.getView().addEventDelegate({
+            onBeforeShow: function(evt) {
+                var context = sap.ui.getCore().Bundle.context;
+    	        var form = evt.to.byId("DetailsForm");
+    	        form.bindElement(context);
+           }
+        }); 
+    },
+
 
 	handleNavButtonPress: function(evt) {
 		sap.ui.getCore().byId("__xmlview0--idAppControl").backDetail("OrderHistory");
@@ -7,40 +19,8 @@ sap.ui.controller("test4.view.ViewOrderDetails", {
 	handlePrintDetails: function(evt) {
 		window.print();
 	},
-    /*
-	_fragments: {},
 
-	_getFormFragment: function(sName) {
-		if (!this._fragments[sName]) {
-			this._fragments[sName] = sap.ui.xmlfragment("test4.fragments." + sName, this);
-		}
-		return this._fragments[sName];
-	},
-
-	onExit: function() {
-		jQuery.each(this._fragments, function(i, oFrag) {
-			oFrag.destroy();
-		});
-	},*/
-
-	onInit: function(oEvent) {
-	    
-
-	   // var oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZPROD_CRUDQ_SRV/");
-	//    this.getView().getModel("Orders");
-	//    debugger;
-     //   var oModel = this.getView().getModel("Orders");
-	 //   sap.ui.getCore().byId("DetailsForm").setModel(oModel);
-	  //  console.log(oModel);
-	    
-		// Set the initial form to be the change one
-	//	var oForm = this._getFormFragment("Display");
-	//	this.getView().createId();
-	//	this.getView().byId("idFormContainer").insertContent(oForm);
-	//	this.getView().bindElement("/ProdOrderSet");
-
-	},
-	
+	/*
 	onBeforeRendering : function(){
 	     var oModel = this.getView().getModel(); // not needed just to debug ODataModel
 	     var context = sap.ui.getCore().Bundle.context;
@@ -54,7 +34,7 @@ sap.ui.controller("test4.view.ViewOrderDetails", {
 	     //this.getView().byId("DetailsForm").setModel(oModel);
 	     //this.getView().byId("DetailsForm").setBindingContext(context);
 	     
-	},
+	},*/
 
 	handleBarButtonPress: function(oEvent) {
 
